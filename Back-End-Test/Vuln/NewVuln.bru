@@ -1,0 +1,22 @@
+meta {
+  name: NewVuln
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{host}}/api/report/662bda153da2f8e6d0f0382a/vuln/new
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "VulnName": "SMB Signing Not Required",
+    "Severity": "Medium",
+    "Description": "SMB Signing is not required to access the SMB share which leads to poor access control",
+    "Flagged": "False",
+    "Data": "Lorem Ipsum for the rest of the worlddd!!!!",
+    "id": "662be5db436a2aa0088d6ad1"
+  }
+}

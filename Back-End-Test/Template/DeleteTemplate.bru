@@ -1,0 +1,21 @@
+meta {
+  name: DeleteTemplate
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{host}}/api/report/templates/662bd5c5b83a5cafc472e15f/delete
+  body: json
+  auth: none
+}
+
+body:json {
+  
+      {
+        "Heading": "Executive Summary part 1",
+        "Description": "This section conntains data that needs to be readable by top-level executives",
+        "Data": "Lorem Ipsum for the rest of the worlddd!!!!"
+      }
+  
+}
