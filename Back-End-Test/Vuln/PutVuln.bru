@@ -1,0 +1,21 @@
+meta {
+  name: PutVuln
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{host}}/api/report/vuln/662be5db436a2aa0088d6ad1/save
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "VulnName": "SMB Signing Not Required",
+    "Severity": "Medium",
+    "Description": "SMB Signing is not required to access the SMB share which leads to poor access control",
+    "Flagged?": "False",
+    "Data": "This has useful information about the vulnerability"
+  }
+}

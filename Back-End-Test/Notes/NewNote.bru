@@ -1,0 +1,18 @@
+meta {
+  name: NewNote
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{host}}/api/report/662bda153da2f8e6d0f0382a/note/new
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "Heading": "How to Write Part 3",
+    "Description": "This section contains a description of how to write"
+  }
+}

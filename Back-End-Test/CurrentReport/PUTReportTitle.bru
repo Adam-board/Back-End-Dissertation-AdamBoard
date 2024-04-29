@@ -1,0 +1,17 @@
+meta {
+  name: PUTReportTitle
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{host}}/api/report/662e1276565e14b3b2595075/changeTitle
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "Title": "TestReport"
+  }
+}

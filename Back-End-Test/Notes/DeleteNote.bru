@@ -1,0 +1,21 @@
+meta {
+  name: DeleteNote
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{host}}/api/report/662ba4d0eab128ba6981a33b/section/662bbcdf59d043d61c8b85f3/delete
+  body: json
+  auth: none
+}
+
+body:json {
+  
+      {
+        "Heading": "Executive Summary part 1",
+        "Description": "This section conntains data that needs to be readable by top-level executives",
+        "Data": "Lorem Ipsum for the rest of the worlddd!!!!"
+      }
+  
+}

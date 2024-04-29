@@ -1,0 +1,18 @@
+meta {
+  name: PostNewTemplate
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{host}}/api/report/templates/new
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "TemplateName": "StandardLayoutTest150",
+    "id": "662bda153da2f8e6d0f0382a"
+  }
+}

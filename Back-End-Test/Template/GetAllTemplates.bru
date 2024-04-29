@@ -1,0 +1,11 @@
+meta {
+  name: GetAllTemplates
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/api/report/templates
+  body: json
+  auth: none
+}
