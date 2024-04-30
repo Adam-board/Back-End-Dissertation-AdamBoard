@@ -10,7 +10,7 @@ currentReportBlueprint = Blueprint('currentReportBlueprint', __name__)
 @currentReportBlueprint.route("/api/report/<ReportID>/sections", methods=["GET"])
 def GetAllSections(ReportID):
     
-     # Find the report document
+    # Find the report document
     report = reports.find_one({"_id": ObjectId(ReportID)})
     if report:
         # Extract section IDs from the report document

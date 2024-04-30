@@ -1,0 +1,17 @@
+meta {
+  name: ExportToWord
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{host}}/api/report/exportword
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "ReportId": "662fd8c29097c6f91d45cfa4"
+  }
+}
