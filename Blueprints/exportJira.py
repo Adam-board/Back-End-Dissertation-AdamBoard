@@ -13,7 +13,7 @@ exportJiraBlueprint = Blueprint('exportJiraBlueprint', __name__)
 
 # Jira API credentials
 JIRA_URL = 'https://report-writing-project.atlassian.net'
-JIRA_USERNAME = 'Adam Board'
+JIRA_USERNAME = '2005335@uad.ac.uk'
 JIRA_API_TOKEN = 'ATATT3xFfGF0t46feRg1S73dJJz05woPnqHXxSN1Av3bh8uVBwRgXZtNAXuufHFLBMRoQnctHRaaPMIpQxGwyG-AddRuj94-cW95cWcZyj6fLAob1cZSNf4qvXc7NaWrYuKnqIGW7SGUagStOAH0dzJBBguUUzCvrYCBw2c4pfQw-Xlm1Q8XouY=6D7A0DFD'
 JIRA_PROJECT_KEY = 'REP'
 
@@ -21,12 +21,12 @@ JIRA_PROJECT_KEY = 'REP'
 jira_client = JIRA(JIRA_URL, basic_auth=(JIRA_USERNAME, JIRA_API_TOKEN))
 
 # Function to create a Jira issue
-def create_jira_issue(summary, description, labels):
+def create_jira_issue(summary, description):
     issue_dict = {
         'project': {'key': JIRA_PROJECT_KEY},
         'summary': summary,
         'description': description,
-        'issuetype': {'name': 'Bug'},  # Change the issue type if needed
+        'issuetype':  {"id": "10001"}, 
     }
 
     return jira_client.create_issue(fields=issue_dict)
@@ -65,7 +65,7 @@ def ExportJira():
                 dataVuln = json.loads(vulnerability['Data'])
                 htmlOutputVuln = html_exporter.render(dataVuln)
                 vulnerability['Data'] = convert_html_to_rich_text(htmlOutputVuln)
-                create_jira_issue(vulnerability['VulnName'], vulnerability['Data'], vulnerability['Severity'])
+                create_jira_issue(vulnerability['VulnName'], vulnerability['Data'])
 
 
     return {"Heading": "Exporting to Jira as Tickets"}
