@@ -1,0 +1,17 @@
+meta {
+  name: ExportToJira
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{host}}/api/report/exportjira
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "ReportId": "662fd8c29097c6f91d45cfa4"
+  }
+}
