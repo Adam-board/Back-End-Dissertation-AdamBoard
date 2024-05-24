@@ -12,10 +12,10 @@ exportJiraBlueprint = Blueprint('exportJiraBlueprint', __name__)
 
 
 # Jira API credentials
-JIRA_URL = 'https://report-writing-project.atlassian.net'
-JIRA_USERNAME = '2005335@uad.ac.uk'
-JIRA_API_TOKEN = 'ATATT3xFfGF0t46feRg1S73dJJz05woPnqHXxSN1Av3bh8uVBwRgXZtNAXuufHFLBMRoQnctHRaaPMIpQxGwyG-AddRuj94-cW95cWcZyj6fLAob1cZSNf4qvXc7NaWrYuKnqIGW7SGUagStOAH0dzJBBguUUzCvrYCBw2c4pfQw-Xlm1Q8XouY=6D7A0DFD'
-JIRA_PROJECT_KEY = 'REP'
+JIRA_URL = '<INSERT ADDRESS>'
+JIRA_USERNAME = '<INSERT ATTACHED EMAIL>'
+JIRA_API_TOKEN = '<INSERT API TOKEN>'
+JIRA_PROJECT_KEY = '<INSERT PROJECT KEY>'
 
 
 jira_client = JIRA(JIRA_URL, basic_auth=(JIRA_USERNAME, JIRA_API_TOKEN))
